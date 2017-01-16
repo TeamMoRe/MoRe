@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        {% load static %}
+
+        <link rel="stylesheet" type="text/css" href="{% static 'bdd/recommandation.css' %}" />
+        <title>Site de recommandation</title>
+    </head>
+    
+    <body>
+        <div id="bloc_page">
+            <header>
+                <div id="titre_principal">
+                    <div id="logo">
+                        <img src="{% static 'bdd/images/logo.gif' %}" alt="Logo du site" />
+                        <h1>Site de recommandation</h1>    
+                    </div>
+                    <h2>Projet étudiant Ecole Centrale Marseille</h2>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="base1">Retour</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section id="reponse">
+                <h1>Recommandé pour vous</h1>
+                <div id="deux_bloc">
+                    <div id="recommandation">
+                        <ol>
+                            {% for element in recommandations %}
+                            <li>
+                                {{ element.0 }} note prédite : {{ element.1 }}
+                            </li>
+                            {% endfor %}
+                        </ol>
+                    </div>
+                    <div id="historique">
+                        <h1>Historique</h1>  
+                        <ol>
+                    	   {% for note in notes %}
+                            <li>
+                        	   {{ note.movie.title }} noté {{ note.rating }}
+                            </li>
+                    	   {% endfor %}
+                        </ol>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <p>
+                Design made by Thibaud Leclaire and Pierre-Marie Becoulet
+                </p>
+            </footer>
+
+        </div>
+    </body>
+</html>

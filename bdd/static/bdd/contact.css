@@ -1,0 +1,136 @@
+@font-face
+{
+    font-family: 'BallparkWeiner';
+    src: url('polices/ballpark.eot');
+    src: url('polices/ballpark.eot?#iefix') format('embedded-opentype'),
+         url('polices/ballpark.woff') format('woff'),
+         url('polices/ballpark.ttf') format('truetype'),
+         url('polices/ballpark.svg#BallparkWeiner') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: 'Dayrom';
+    src: url('polices/dayrom.eot');
+    src: url('polices/dayrom.eot?#iefix') format('embedded-opentype'),
+         url('polices/dayrom.woff') format('woff'),
+         url('polices/dayrom.ttf') format('truetype'),
+         url('polices/dayrom.svg#Dayrom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*page*/
+
+body
+{
+    background: url('images/fond_noir.png');
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #FEFEE2;
+}
+
+#bloc_page
+{
+    width: 95%;
+    margin: auto;
+}
+
+/*header*/
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#titre_principal
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#logo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#logo img
+{
+    width: 75px;
+    height: 50px;
+}
+
+header h1
+{
+    font-family: 'BallparkWeiner', serif;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 2px;
+    color: #5D594E;
+}
+
+header h2
+{
+    font-family: Dayrom, serif;
+    font-size: 1.1em;
+    margin-top: 0px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #CEC7B3;
+}
+
+/* Navigation du header*/
+
+header nav ul
+{
+    list-style-type: none;
+    display: flex;
+}
+
+
+header nav a
+{
+    font-family: Dayrom, serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    color: #FEFEE2;
+    text-decoration: none;
+}
+
+header nav a:hover
+{
+    color: #FF5500;
+    border-bottom: 3px solid #FF5500;
+}
+
+/*Description*/
+
+#descriptif
+{
+    border: 3px solid #b75d03;
+    border-radius: 5px;
+    margin: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#descriptif h1
+{
+    font-family: Dayrom, serif;
+    font-size: 1.3em;
+    font-style: italic;
+    margin: 10px;
+    color: #CEC7B3;
+}
+
+#descriptif p
+{
+    margin: 15px;
+    font-size: 1em;
+}

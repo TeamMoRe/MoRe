@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'bdd/presentation.css' %}" />
+	<title>Presentation</title>
+</head>
+
+<body>
+	<div id="bloc_page">
+		<header>
+            <div id="titre_principal">
+                <div id="logo">
+                    <img src="{% static 'bdd/images/logo.gif' %}" alt="Logo du site" />
+                    <h1>Site de recommandation</h1>    
+                </div>
+                <h2>Projet étudiant Ecole Centrale Marseille</h2>
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="base1">Retour</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="descriptif">
+        		<h1>Qui sommes nous ?</h1>
+                <p>
+                Nous sommes un groupe de 8 étudiants de l'école d'ingénieur Centrale Marseille qui a pour projet de développer un site web qui utiliserait un algorithme de recommandation afin d'aider l'utilisateur dans ses choix de films en fonction de ses goûts.
+                </p>
+
+                <h1>Comment ça marche ?</h1>
+        		<p>
+        			Il vous suffit de noter les films que vous avez déjà vu parmi la base de données proposée. A partir de là, nous vous retournons les films qui <span id="italic">vous</span> correspondent le plus. Vous n'avez plus qu'à en choisir 1 parmi ceux-là, satisfaction garantie !
+        		</p>
+        		<p>
+        			Une fois le site adopté nous pourrons vous proposer les films de vos rêves. Que ce soit de l'action pour enfant, du western surnaturel, de l'horreur fantastique ou une comédie musicale romatique vous trouverez les pépites qui n'attendent plus que vous sur ce site.
+        		</p>
+        		<p>
+        			Notre site de recommandation c'est par <a href="base1">ici</a>.
+        		</p>
+        </section>
+</body>
+
+
+
+
+
+

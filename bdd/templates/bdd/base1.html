@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        {% load static %}
+
+        <link rel="stylesheet" type="text/css" href="{% static 'bdd/base1.css' %}" />
+        <title>Site de recommandation</title>
+    </head>
+    
+    <body>
+        <div id="bloc_page">
+            <header>
+                <div id="titre_principal">
+                    <div id="logo">
+                        <img src="{% static 'bdd/images/logo.gif' %}" alt="Logo du site" />
+                        <h1>Site de recommandation</h1>    
+                    </div>
+                    <h2>Projet étudiant Ecole Centrale Marseille</h2>
+                </div>
+                
+                <nav>
+                    <ul>
+                        <li><a href="recommandation">Recommandation</a></li>
+                        <li><a href="presentation">Présentation du projet</a></li>
+                        <li><a href="https://www.imdb.com/" target="_blank">IMDB</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section id="formulaire">
+                <h1>Quels films avez-vous vu ?</h1>
+                    <div id="selection">
+                        <div id="historique">
+                            <h1>Historique</h1>  
+                            <ol>
+                                {% for note in notes %}
+                                <li>
+                                    {{ note.movie.title }} noté {{note.rating}}
+                                </li>
+                                {% endfor %}
+                            </ol>
+                        </div>
+                        <div id="selection_film">
+                            <ul>
+                                {% for film in bdd %}
+                                <li>
+                            	   {{ film.title }}
+                            	   <form action="" method="post">
+                            		  {% csrf_token %}
+                            		  {{ form }}
+                            		  <input type="hidden" name="movie_id" value="{{ film.id }}" />
+                            		  <input type="submit" name="{{ film.id }}" value="Noter" />
+                            	   </form>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+            </section>
+
+            <footer>
+                <p>
+                Design made by Thibaud Leclaire and Pierre-Marie Becoulet
+                </p>
+            </footer>
+
+        </div>
+    </body>
+</html>
