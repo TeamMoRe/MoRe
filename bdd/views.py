@@ -4,8 +4,6 @@ from django.shortcuts import render
 from datetime import datetime
 from bdd.models import Film, Rating, User
 from bdd.forms import RatingForm
-import sys
-sys.path.append('C:/Users/nicop/Documents/more')
 import numpy as np
 
 def base1(request):
