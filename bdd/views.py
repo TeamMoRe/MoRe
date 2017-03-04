@@ -34,17 +34,6 @@ def presentation(request):
 def contact(request):
         return render(request, 'bdd/contact.html')
 
-##def recommandation(request):
-##        users = User.objects.all()
-##        movies = Film.objects.all()
-##        ratings = Rating.objects.all()
-##        user_ratings_dict, movie_ratings_dict = fast_cf_new.double_dict(ratings)
-##        similitude = fast_cf_new.similitude_func(users, user_ratings_dict, movie_ratings_dict)
-##        
-##        utilisateur = User.objects.get(age = "default")
-##        notes = Rating.objects.filter(user = utilisateur)
-##        recommandations = fast_cf_new.ranking(utilisateur.id, similitude, user_ratings_dict, movie_ratings_dict, movies)
-##        return render(request, 'bdd/recommandation.html', {'notes': notes, 'recommandations': recommandations })
 
 def recommandation(request):
         users = User.objects.all()

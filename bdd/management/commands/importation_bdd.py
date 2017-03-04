@@ -1,13 +1,12 @@
 from bdd.models import Film, User, Rating
 from django.core.management.base import BaseCommand
-import sys
-sys.path.append('C:/Users/Anthony Andolfo/Downloads/more/bdd/management/commands')
 import data_extraction
 
 
 class Command(BaseCommand):
-    args = '<foo bar ...>'
-    help = 'our help string comes here'
+
+    help = 'Import data from MovieLens 100k database'
+
     def _create_tags(self):
         dictionnaire_movie = {}
         dictionnaire_user = {}
@@ -24,6 +23,8 @@ class Command(BaseCommand):
             user = User(age = H[h].age, gender = H[h].gender, occupation = H[h].occupation, zip_code = H[h].zip_code)
             user.save()
             dictionnaire_user[H[h].id] = user.id
+        user = User(age = "default", gender = "default", occupation = "default", zip_code = "default")
+        user.save()
         print("Importation des users reussie")
 
         K = data[2]
