@@ -1,3 +1,4 @@
+This project was made by Nicolas Pougeade, Anthony Andolfo, Etienne Gautier, Pierre-Marie Becoulet, Alexandre Calnibalosky, Alexandre Ollivier, Guillaume Morel and Thibaud Leclaire.
 Works with Django - make sure it is installed - go into your project folder and use the command "python3 manage.py runserver"
 Website is fully functionnal : homepage is localhost:8000/bdd/base1
 Works with MovieLens 100k database - already imported in db.sqlite3. If need to reimport it : use the command "python3 manage.py importation_bdd".
